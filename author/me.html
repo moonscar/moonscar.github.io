@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>Blog by jupyter - me</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Blog by jupyter Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Blog by jupyter </a></h1>
+                <nav><ul>
+                    <li><a href="/category/none.html">None</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/None.html">passage</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-05-11T00:00:00+08:00">
+                Published: 五 11 五月 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/me.html">me</a>
+        </address>
+<p>In <a href="/category/none.html">None</a>.</p>
+<p>tags: <a href="/tag/none.html">None</a> </p>
+</footer><!-- /.post-info --><style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#28779;&#28844;&#20869;&#37096;&#20043;&#26053;(&#31532;&#19968;&#37096;&#20998;)">&#28779;&#28844;&#20869;&#37096;&#20043;&#26053;(&#31532;&#19968;&#37096;&#20998;)<a class="anchor-link" href="#&#28779;&#28844;&#20869;&#37096;&#20043;&#26053;(&#31532;&#19968;&#37096;&#20998;)">&#182;</a></h1><blockquote><p>原文地址：<a href="https://pytorch.org/2017/05/11/Internals.html">A Tour of PyTorch Internals (Part I)</a><br>
+希望从翻译这篇文章开始能认真的去读一下pytorch源码</p>
+</blockquote>
+<p>本文进度</p>
+<p>全文翻译</p>
+<ul>
+<li>[x] 简介  </li>
+<li>[x] 扩展 Python 解释器  </li>
+<li>[x] The THPTensor Type  </li>
+<li>[x] Generic Builds  </li>
+<li>[x] PyTorch 封装</li>
+</ul>
+<p>全文校对
+引用修正</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>火炬的基本单位是张量。 这篇文章将作为我们如何在 PyTorch 中实现张量的概述，这样用户可以从 Python shell 中与之交互。 特别是，我们想要回答四个主要问题:</p>
+<ul>
+<li>Pytorch 是如何通过定义 Python 中 Tensor 类型来扩展 Python 解释器的？</li>
+<li>Pytorch 是如何封装实际定义 Tensor 的属性和方法的 c 库的？</li>
+<li>Pytorch 如何编写 Tensor 方法的代码？</li>
+<li>Pytorch 的构建系统如何将所有这些组件来编译和生成一个可行的应用程序的？</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25193;&#23637;-Python-&#35299;&#37322;&#22120;">&#25193;&#23637; Python &#35299;&#37322;&#22120;<a class="anchor-link" href="#&#25193;&#23637;-Python-&#35299;&#37322;&#22120;">&#182;</a></h2><p>PyTorch 定义了一个新的<code>torch</code>包。 在这篇文章中，我们将主要介绍 <code>._C</code> 模块。 这个模块被称为"扩展模块"——用 c 编写的 Python 模块。 这些模块允许我们定义新的内置 python 类型(例如 <code>Tensor</code>) ，和调用 c/c++ 函数。</p>
+<p><code>._C</code> 模块在 <code>torch/csrc/module.cpp</code> 中定义。 函数 <code>init_C()</code> / <code>PyInit__C()</code>函数创建<code>._C</code>模块并酌情添加方法定义。 <code>._C</code>模块被传递给一系列以 <code>__init()</code> 开头的函数，这些函数负责向模块中添加更多的对象，或者注册新的类型等。</p>
+<blockquote><p>译注：关于<code>init_C()</code> / <code>PyInit__C()</code>这两个函数，前者在py2中被使用，后者在py3中被使用。</p>
+</blockquote>
+<p>部分 <code>__init()</code> 函数如下：</p>
+<div class="highlight"><pre><span></span><span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPDoubleTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPFloatTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPHalfTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPLongTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPIntTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPShortTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPCharTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+<span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">THPByteTensor_init</span><span class="p">(</span><span class="n">module</span><span class="p">));</span>
+</pre></div>
+<p>这些函数将不同类型的 <code>Tensor</code> 对象添加到 <code>_C</code> 模块，以便它们可以在模块中使用。 让我们来了解一下这些方法是如何工作的。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-THPTensor-Type">The THPTensor Type<a class="anchor-link" href="#The-THPTensor-Type">&#182;</a></h2><p>与底层的 TH 和 THC 库非常相似，PyTorch 定义了一个"通用的" Tensor 基类(实际上它的名字叫 THPTensor),这个基类用于生成许多不同的子类。 在考虑这个子类如何定义之前，让我们首先考虑如何在  Python 中定义一个新的内置类型，以及我们如何创建通用的 THPTensor 类。</p>
+<p>Python 解释器将所有 Python 对象视为 <code>PyObject *</code> 类型的变量，它是所有 Python 对象的"基础类型"。 每个 Python 类型都包含一个针对对象的引用计数，以及指向对象类型对象的指针。 类型对象决定类型有什么属性。 例如，它可能包含一个与类型相关联的方法列表，列表中的每一个元素会有一个对应的 c 函数的实现。 该对象还包含表示其状态所必需的任何字段。</p>
+<p>定义一个新类型的方法如下：</p>
+<ul>
+<li>创建一个结构体，用来定义新的对象包含什么属性</li>
+<li>为该类型定义一个<strong>类型对象</strong></li>
+</ul>
+<p>结构体本身可能非常简单。 在Python中，所有的浮点类型实际上都是堆上的对象。 这个 Python 浮点结构的定义是:</p>
+<div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">PyObject_HEAD</span>
+    <span class="kt">double</span> <span class="n">ob_fval</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">PyFloatObject</span><span class="p">;</span>
+</pre></div>
+<p><code>PyObject_HEAD</code> 是一个宏，它定义了了实现对象的引用计数的代码，以及一个指向对应类型对象的指针。 因此，在这种情况下，要实现浮点，唯一需要的其他"状态"是浮点值本身。</p>
+<p>现在，让我们看看 THPTensor 类型的结构:</p>
+<div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">THPTensor</span> <span class="p">{</span>
+    <span class="n">PyObject_HEAD</span>
+    <span class="n">THTensor</span> <span class="o">*</span><span class="n">cdata</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>很简单，对吧？ 我们只是存储一个底层的 TH 张量指针，然后做一个封装。</p>
+<p>关键部分是为新类型定义"类型对象"。 我们的 Python 浮点的类型对象的一个示例定义采用了以下形式:</p>
+<div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyTypeObject</span> <span class="n">py_FloatType</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="s">&quot;py.FloatObject&quot;</span><span class="p">,</span>          <span class="cm">/* tp_name */</span>
+    <span class="k">sizeof</span><span class="p">(</span><span class="n">PyFloatObject</span><span class="p">),</span>     <span class="cm">/* tp_basicsize */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_itemsize */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_dealloc */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_print */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_getattr */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_setattr */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_as_async */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_repr */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_as_number */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_as_sequence */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_as_mapping */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_hash  */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_call */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_str */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_getattro */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_setattro */</span>
+    <span class="mi">0</span><span class="p">,</span>                         <span class="cm">/* tp_as_buffer */</span>
+    <span class="n">Py_TPFLAGS_DEFAULT</span><span class="p">,</span>        <span class="cm">/* tp_flags */</span>
+    <span class="s">&quot;A floating point number&quot;</span><span class="p">,</span> <span class="cm">/* tp_doc */</span>
+<span class="p">};</span>
+</pre></div>
+<p>对类型对象的最简单的理解方式是，它定义了一组字段，这些字段将成为对象属性。 例如，<code>tp_basicsize</code> 字段的大小被设置为 <code>sizeof(PyFloatObject)</code>。 这是为了让 Python 为 <code>PyFloatObject</code> 调用 <code>PyObject_New()</code> 时(实例化一个 <code>PyFloatObject</code> 对象)知道要分配多少内存。 你可以设置的全部字段列表在 CPython 源码的 <a href="https://github.com/python/cpython/blob/master/Include/object.h"><code>object.h</code></a> 中定义。</p>
+<p>我们需要为 <code>THPTensor</code> 定义的类型对象是 <code>THPTensorType</code> ，在 <code>csrc/generic/Tensor.cpp</code> 中被定义。这个对象为 <code>THPTensor</code> 定义了名称、大小、映射方法等。</p>
+<p>举个例子，让我们来看看 PyTypeObject 中设置的 <code>tp_new</code> 函数:</p>
+<div class="highlight"><pre><span></span><span class="n">PyTypeObject</span> <span class="n">THPTensorType</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">PyVarObject_HEAD_INIT</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">...</span>
+  <span class="n">THPTensor_</span><span class="p">(</span><span class="n">pynew</span><span class="p">),</span> <span class="cm">/* tp_new */</span>
+<span class="p">};</span>
+</pre></div>
+<p>这个 <code>tp_new</code> 函数使对象创建成为可能。 它负责创建(而不是初始化)该类型的对象，并且与 Python 中的 <code>__new__()</code> 相当。这个 C 实现是一个静态方法，它传递被实例化的类型和初始化需要的参数，并返回一个新被创建的对象。</p>
+<div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span> <span class="nf">THPTensor_</span><span class="p">(</span><span class="n">pynew</span><span class="p">)(</span><span class="n">PyTypeObject</span> <span class="o">*</span><span class="n">type</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">HANDLE_TH_ERRORS</span>
+  <span class="n">Py_ssize_t</span> <span class="n">num_args</span> <span class="o">=</span> <span class="n">args</span> <span class="o">?</span> <span class="n">PyTuple_Size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="n">THPTensorPtr</span> <span class="n">self</span> <span class="o">=</span> <span class="p">(</span><span class="n">THPTensor</span> <span class="o">*</span><span class="p">)</span><span class="n">type</span><span class="o">-&gt;</span><span class="n">tp_alloc</span><span class="p">(</span><span class="n">type</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="c1">// more code below</span>
+</pre></div>
+<p>The first thing our new function does is allocate the THPTensor. It then runs through a series of initializations based off of the args passed to the function. For example, when creating a THPTensor x from another THPTensor y, we set the newly created THPTensor’s cdata field to be the result of calling THTensor_(newWithTensor) with the y’s underlying TH Tensor as an argument. Similar constructors exist for sizes, storages, NumPy arrays, and sequences.</p>
+<p>我们的新函数所做的第一件事就是分配为新的 <code>THPTensor</code> 分配内存。然后它通过运行一系列初始化函数来使用传入的参数。例如，当从另一个 <code>THPTensor y</code> 创建一个 <code>THPTensor x</code> 时，变量 x 的 cdata 字段的值，将会是调用 <code>THTensor_(y)</code> 的返回值(这个函数是 C 函数，其中的y指的是这个python对象所对应的底层THPTensor对象)。将新创建的 THPTensor 的 cdata 场设置为 THTensor (newWithTensor)作为参数。 类似的构造函数存在于大小、存储器、 NumPy 数组和序列上。</p>
+<blockquote><p>此处应该为最后一句话添加译注</p>
+</blockquote>
+<p>** 注意：我们只单独使用 <code>tp_new</code> ，而不是组合使用 <code>tp_new</code> 和 <code>tp_init</code> (对应python中的 <strong>init</strong>()函数)。</p>
+<p>在 <code>Tensor.cpp</code> 中定义的另一个重要的东西是索引的工作方式。 PyTorch 支持 Python 的映射协议。 这让我们可以做以下的事情:</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">//</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">//</span> <span class="n">etc</span><span class="o">.</span>
+</pre></div>
+<p>** 注意：此索引扩展到具有多个维度的 Tensor</p>
+<p>通过定义这里描述的三种映射方法，我们能够使用[]样式符号。</p>
+<p>最重要的方法是 <code>THPTensor_(getValue)</code> 和 <code>THPTensor_(setValue)</code> ，它描述了如何索引张量，如何返回新的张量 / 标量，或原地更新现有张量的值。通读这些实现来更好地理解 PyTorch 如何支持基本的张量索引。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generic-Builds">Generic Builds<a class="anchor-link" href="#Generic-Builds">&#182;</a></h2><h3 id="&#31532;&#19968;&#37096;&#20998;">&#31532;&#19968;&#37096;&#20998;<a class="anchor-link" href="#&#31532;&#19968;&#37096;&#20998;">&#182;</a></h3><blockquote><p>本节的代码被迁移到THGenerateAllTypes.h中</p>
+</blockquote>
+<p>我们可以花费大量的时间探索 <code>THPTensor</code> 的各个方面，以及它如何定义一个新的 Python 类型对象。 但是我们仍然需要看看 <code>THPTensor_(init)()</code> 函数如何被转换为我们在模块初始化时使用的 <code>THPIntTensor_init()</code>。 我们如何将 Tensor.cpp 文件定义为"通用的" Tensor，并用它来生成所有类型的 Python 类型对象？ 换句话说，Tensor.cpp 充斥着一系列代码，比如:</p>
+<div class="highlight"><pre><span></span><span class="k">return</span> <span class="nf">THPTensor_</span><span class="p">(</span><span class="n">New</span><span class="p">)(</span><span class="n">THTensor_</span><span class="p">(</span><span class="n">new</span><span class="p">)(</span><span class="n">LIBRARY_STATE_NOARGS</span><span class="p">));</span>
+</pre></div>
+<p>这说明了我们需要在以下两种情况，做针对类型的修改:</p>
+<ul>
+<li>我们的输出代码会调用<code>THP&lt;Type&gt;Tensor_New(...)</code>代替<code>THPTensor_(New)</code></li>
+<li>我们的输出代码会调用<code>TH&lt;Type&gt;Tensor_new(...)</code>代替<code>THTensor_(new)</code></li>
+</ul>
+<p>换句话说，对于所有支持的 Tensor 类型，我们需要"生成"源代码来完成上述的替换。 这是 Pytorch 的"构建"过程的一部分。 Pytorch 依赖 <a href="https://setuptools.readthedocs.io/en/latest/">Setuptools</a>来构建软件包，我们在顶级目录中定义一个 setup.py 文件来定制构建过程。</p>
+<p>使用 Setuptools 构建扩展模块的一个组件是列出编译中涉及的源文件。 然而，我们的 <code>csrc/generic/tensor.cpp</code> 文件没有列出！ 那么，这个文件中的代码是如何成为最终产品的一部分呢？</p>
+<p>Recall that we are calling the THPTensor* functions (such as init) from the directory above generic. If we take a look in this directory, there is another file Tensor.cpp defined. The last line of this file is important:</p>
+<p>【不理解TAG】回想一下，我们将 THPTensor * 函数(如 init)从上面的通用目录调用。 如果我们看一下这个目录，定义了另一个 Tensor.cpp 。 这个文件的最后一行很重要:</p>
+<div class="highlight"><pre><span></span><span class="c1">//generic_include TH torch/csrc/generic/Tensor.cpp</span>
+</pre></div>
+<p>请注意，这个 Tensor.cpp 文件包含在 setup.py 中，但是它被封装在一个 split_types 的 Python 帮助函数中。 此函数作为文件的输入，并在文件内容中寻找"//generic_include"字符串。 如果被发现，它会为每个 Tensor 类型生成一个新的输出文件，其中包括以下更改:</p>
+<ul>
+<li>输出文件被重命名为<code>Tensor&lt;Type&gt;.cpp</code></li>
+<li>输出文件稍作修改如下:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="cp"># Before:</span>
+<span class="c1">//generic_include TH torch/csrc/generic/Tensor.cpp</span>
+
+<span class="cp"># After:</span>
+<span class="cp">#define TH_GENERIC_FILE &quot;torch/src/generic/Tensor.cpp&quot;</span>
+<span class="cp">#include</span> <span class="cpf">&quot;TH/THGenerate&lt;Type&gt;Type.h&quot;</span><span class="cp"></span>
+</pre></div>
+<p><code>#include TH/THGenerate&lt;Type&gt;Type.h</code>，在引入Tensor.cpp中的源码会有副作用，将产生一些额外的上下文。 让我们看看其中的一个头文件:</p>
+<div class="highlight"><pre><span></span><span class="cp">#ifndef TH_GENERIC_FILE</span>
+<span class="cp">#error &quot;You must define TH_GENERIC_FILE before including THGenerateFloatType.h&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define real float</span>
+<span class="cp">#define accreal double</span>
+<span class="cp">#define TH_CONVERT_REAL_TO_ACCREAL(_val) (accreal)(_val)</span>
+<span class="cp">#define TH_CONVERT_ACCREAL_TO_REAL(_val) (real)(_val)</span>
+<span class="cp">#define Real Float</span>
+<span class="cp">#define THInf FLT_MAX</span>
+<span class="cp">#define TH_REAL_IS_FLOAT</span>
+<span class="cp">#line 1 TH_GENERIC_FILE</span>
+<span class="cp">#include</span> <span class="cpf">TH_GENERIC_FILE</span><span class="cp"></span>
+<span class="cp">#undef accreal</span>
+<span class="cp">#undef real</span>
+<span class="cp">#undef Real</span>
+<span class="cp">#undef THInf</span>
+<span class="cp">#undef TH_REAL_IS_FLOAT</span>
+<span class="cp">#undef TH_CONVERT_REAL_TO_ACCREAL</span>
+<span class="cp">#undef TH_CONVERT_ACCREAL_TO_REAL</span>
+
+<span class="cp">#ifndef THGenerateManyTypes</span>
+<span class="cp">#undef TH_GENERIC_FILE</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>这样做的目的是从通用的 Tensor.cpp 文件中引入代码，并使用<code>TH_GENERIC_FILE</code>将其包围起来。 例如，我们将 real 定义为 float，所以泛型 Tensor 实现中的任何包含 real 的代码都会被 float 代替。 在相应的文件 THGenerateIntType.h 中，相同的宏将用 int 代替 real。</p>
+<p>这些输出文件从 split_types 返回，并添加到源文件列表中，这样我们就可以看到不同类型的 cpp 代码是如何创建的。</p>
+<p>这里有一些事情需要注意: 首先，split_types 函数并不是绝对必要的。 我们可以将 Tensor.cpp 中的代码封装在一个文件中，重复每个类型的代码。 我们将代码分成不同文件是为了加快编译速度。 第二，当我们谈到类型替换时，我们的意思是 c 预处理器将在编译过程中执行这些替换。 在预处理之前，仅仅使用这些宏来包围源代码没有副作用。</p>
+<h3 id="&#31532;&#20108;&#37096;&#20998;">&#31532;&#20108;&#37096;&#20998;<a class="anchor-link" href="#&#31532;&#20108;&#37096;&#20998;">&#182;</a></h3><p>现在我们已经有了所有 Tensor 类型的源文件，我们需要考虑相应的头声明是如何创建的，以及将 <code>THTensor_(method)</code> 和 <code>THPTensor_(method)</code> 转换为 <code>TH&lt;Type&gt;Tensor_method</code> 和 <code>THP&lt;Type&gt;Tensor_method</code>的工作。 例如，<code>csrc/generic/Tensor.h</code> 声明如下:</p>
+<div class="highlight"><pre><span></span><span class="n">THP_API</span> <span class="n">PyObject</span> <span class="o">*</span> <span class="nf">THPTensor_</span><span class="p">(</span><span class="n">New</span><span class="p">)(</span><span class="n">THTensor</span> <span class="o">*</span><span class="n">ptr</span><span class="p">);</span>
+</pre></div>
+<p>在生成头文件时，我们使用与源文件中生成代码相同策略。 在 <code>csr/Tensor.h</code> 中，我们做了以下几点:</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;generic/Tensor.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;TH/THGenerateAllTypes.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;generic/Tensor.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;TH/THGenerateHalfType.h&gt;</span><span class="cp"></span>
+</pre></div>
+<p>对于每一种类型来说，这样做的效果是一样的，我们从通用头文件中提取的代码包含相同的宏定义。 唯一的区别是，结果代码都包含在同一个头文件中，而不是被分割成多个源文件。</p>
+<p>最后，我们需要考虑如何"转换"或"替换"函数类型。 如果我们查看同一个头文件，我们会看到一堆 #define ，包括:</p>
+<div class="highlight"><pre><span></span><span class="cp">#define THPTensor_(NAME)            TH_CONCAT_4(THP,Real,Tensor_,NAME)</span>
+</pre></div>
+<p>这个宏表示，源代码中所有匹配格式 <code>THPTensor_(NAME)</code> 的字符串，都应该用 <code>THPRealTensor_NAME</code> 代替，替代宏中的 Real 的实际值根据当前的宏定义确定。 因为我们的头文件代码和源文件代码被上面所见的所有类型的宏定义所包围，在预处理器运行后，结果代码是我们所期望的。 Th 库中的代码为 THTensor_(NAME) 定义了相同的宏，也支持这些函数的转换。 通过这种方式，我们最终会得到带有专门代码的头文件和源文件。</p>
+<h3 id="&#27169;&#22359;&#23545;&#35937;&#21644;&#31867;&#22411;&#26041;&#27861;">&#27169;&#22359;&#23545;&#35937;&#21644;&#31867;&#22411;&#26041;&#27861;<a class="anchor-link" href="#&#27169;&#22359;&#23545;&#35937;&#21644;&#31867;&#22411;&#26041;&#27861;">&#182;</a></h3><p>Now we have seen how we have wrapped TH’s Tensor definition in THP, and generated THP methods such as THPFloatTensor<em>init(...). Now we can explore what the above code actually does in terms of the module we are creating. The key line in THPTensor</em>(init) is:</p>
+<p>现在我们已经看到在 THP 中是如何包裹 TH 的张量定义的，并且生成了 THP 方法，如 <code>THPFloatTensor_init(...)</code>。 现在我们可以从我们创建的模块中探索上述代码的实际功能。 <code>THPTensor_(init)</code> 中的关键行是:</p>
+<div class="highlight"><pre><span></span><span class="cp"># THPTensorBaseStr, THPTensorType are also macros that are specific </span>
+<span class="cp"># to each type</span>
+<span class="n">PyModule_AddObject</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">THPTensorBaseStr</span><span class="p">,</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">THPTensorType</span><span class="p">);</span>
+</pre></div>
+<p>这个函数将我们的 Tensor 对象注册到扩展模块，因此我们可以在 Python 代码中使用 THPFloatTensor，THPIntTensor 等。</p>
+<p>仅仅能够创建张量并不是很有用，我们需要能够调用 TH 定义的所有方法。 一个简单的例子显示在 Tensor 上调用原地置零方法。</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
+</pre></div>
+<p>Let’s start by seeing how we add methods to newly defined types. One of the fields in the “type object” is tp_methods. This field holds an array of method definitions (PyMethodDefs) and is used to associate methods (and their underlying C/C++ implementations) with a type. Suppose we wanted to define a new method on our PyFloatObject that replaces the value. We could implement this as follows:</p>
+<p>让我们先看看如何将方法添加到新定义类型。 "类型对象"中的一个字段是 <code>tp_methods</code>。 该字段包含一个方法定义(PyMethodDefs)的数组 ，用于将方法(及其基础的 C/C++ 实现)与类型相关联。 假设我们想要在我们的 PyFloatObject 上定义一个新的方法来替换这个值。 我们可以这样做:</p>
+<div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span> <span class="nf">replace</span><span class="p">(</span><span class="n">PyFloatObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">val</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">self</span><span class="o">-&gt;</span><span class="n">ob_fval</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+    <span class="n">Py_RETURN_NONE</span>
+<span class="p">}</span>
+</pre></div>
+<p>这相当于 Python 方法:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ob_fval</span> <span class="o">=</span> <span class="n">val</span>
+</pre></div>
+<p>It is instructive to read more about how defining methods works in CPython. In general, methods take as the first parameter the instance of the object, and optionally parameters for the positional arguments and keyword arguments. This static function is registered as a method on our float:</p>
+<p>了解更多关于定义方法在 CPython 中是如何工作的，是很有启发性的事。 通常，方法将对象的实例作为第一个参数，然后是可选参数，如位置参数和关键字参数。这个静态函数在我们的浮点类型上被注册为一种方法:</p>
+<div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">PyMethodDef</span> <span class="n">float_methods</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">{</span><span class="s">&quot;replace&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">PyCFunction</span><span class="p">)</span><span class="n">replace</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span>
+    <span class="s">&quot;replace the value in the float&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span><span class="nb">NULL</span><span class="p">}</span> <span class="cm">/* Sentinel */</span>
+<span class="p">}</span>
+</pre></div>
+<p>这个被注册函数的名字是“替换”，它是由同名的 c 函数实现的。 <code>METH_VARARGS</code>标志表示该方法采用一组参数表示函数的所有参数。 将类型对象 tp_methods 字段的值设为这个数组，然后我们可以对该类型的对象使用“替换”方法。</p>
+<p>我们希望能够调用 THP 张量上等价与 TH 张量的所有方法。 然而，为所有 TH 方法编写包装器将耗费时间并且容易出错。 我们需要一个更好的方法来做这件事。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="PyTorch-&#23553;&#35013;">PyTorch &#23553;&#35013;<a class="anchor-link" href="#PyTorch-&#23553;&#35013;">&#182;</a></h2><p>PyTorch 实现了自己的 cwrap 工具来包装 TH Tensor 的方法用于 Python 后端。 我们定义了一个 .cwrap 文件，包含一系列的声明在我们的自定义 YAML 格式文件中的 c 方法。 Cwrap 工具将这个文件作为输入，输出包含封装方法的 cpp 源文件，封装方法的格式与 THPTensor Python 对象和 Python c 扩展方法调用格式兼容。该工具不仅用于为 TH 生成代码，还为 CuDNN 生成代码。 它被定义为可扩展的。</p>
+<p>一个示例 YAML"声明"的原地操作 addmv_ 函数如下:</p>
+
+<pre><code>[[
+  name: addmv_
+  cname: addmv
+  return: self
+  arguments:
+    - THTensor* self
+    - arg: real beta
+      default: AS_REAL(1)
+    - THTensor* self
+    - arg: real alpha
+      default: AS_REAL(1)
+    - THTensor* mat
+    - THTensor* vec
+]]</code></pre>
+<p>Cwrap 工具的结构非常简单。 它读取一个文件，然后用一系列插件处理它。文档参见 <code>tools/cwrap/plugins/__init__.py</code>，文档中描述了一个插件可以改变代码的所有方法。</p>
+<p>源代码生成发生在一系列的通道中。 首先，对 YAML 的"声明"进行了解析和处理。 然后，源代码被生成一块一块地添加诸如参数检查和提取、定义方法头、以及对基础库，如 TH，的实际调用。 最后，cwrap 工具可以同时处理整个文件。 可以在这里探索由此产生的 addmv_ 函数的输出代码。</p>
+<p>为了与 CPython 后端通信，该工具生成了一个 PyMethodDefs 的数组，该数组可以存储或添加到 THPTensor 的 tp_methods 字段中。</p>
+<p>在封装张量方法的具体情形下，构建过程首先从 TensorMethods.cwrap 生成输出源文件。 这个源文件被 #include 在通用 Tensor 的源文件中。 这一切都发生在预处理器开始之前。 因此，所有方法包装器的生成都经过了类似的过程，如 THPTensor 代码的生成一半。 因此，一个单一的通用声明和定义也是专门针对每一类型的。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Putting-It-All-Together">Putting It All Together<a class="anchor-link" href="#Putting-It-All-Together">&#182;</a></h2><p>到目前为止，我们已经展示了如何通过创建一个新的扩展模块来扩展 Python 解释器，如何在扩展模块中定义新的 THPTensor 类型，以及如何生成所有类型张量的源代码。 简而言之，我们了解了编译。</p>
+<p>Setuptools 允许我们定义一个可编译的扩展。 整个 <code>torch._C</code> 扩展是通过收集所有源文件、头文件、库文件等来编译的，编译生成一个 setuptools 扩展。 然后，setuptools 处理扩展本身的问题。 我将在随后的文章中更多地探索构建过程。</p>
+<hr>
+<p>总结一下，让我们重新审视我们的四个问题:</p>
+<ul>
+<li>Pytorch 是如何通过定义 Python 中 Tensor 类型来扩展 Python 解释器的？</li>
+</ul>
+<blockquote><p>它使用 CPython 的框架来扩展 Python 解释器并定义新类型，同时特别注意为所有类型生成代码。</p>
+</blockquote>
+<ul>
+<li>Pytorch 是如何封装实际定义 Tensor 的属性和方法的 c 库的？</li>
+</ul>
+<blockquote><p>它通过定义一个新的类型 THPTensor 来实现这一点，THPTensor 封装了张量类型 TH 。 函数调用通过 CPython 后端的接口转发到此张量。</p>
+</blockquote>
+<ul>
+<li>Pytorch 如何的C扩展如何生成所有 Tensor 的方法代码？</li>
+</ul>
+<blockquote><p>它采用我们自定义的 yaml 格式代码，并通过使用一些插件通过一系列步骤来处理，从而为每个方法生成源代码。</p>
+</blockquote>
+<ul>
+<li>Pytorch 的构建系统如何将所有这些组件来编译和生成一个可行的应用程序的？</li>
+</ul>
+<blockquote><p>使用 Setuptools 将大量的源 / 头文件、库和编译指令编译成扩展。</p>
+</blockquote>
+<hr>
+<p>这只是 PyTorch 构建系统部分部分的快照。 这里有更多的差别和细节，但我希望这是对我们 Tensor 库中众多组件的一个友好的介绍。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resources:">Resources:<a class="anchor-link" href="#Resources:">&#182;</a></h2><p><a href="https://docs.python.org/3.7/extending/index.html">https://docs.python.org/3.7/extending/index.html</a> is invaluable for understanding how to write C/C++ Extension to Python</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
